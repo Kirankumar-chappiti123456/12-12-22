@@ -33,6 +33,56 @@ void fun(char str[])
         c++;
     }
     
+    
+    
+    
+    
+    
+    string copy without and with the string copy function:
+    
+    
+    #include <stdio.h>
+int main()
+{
+    char k[]="kiran kumar";
+    char k1[]="yadav";
+    int i=0;
+    for( i=0;k1[i]!='\0';i++)
+    {
+    k[i]=k1[i];
+    }
+    k[i]='\0';
+    printf("%s\n",k);
+    printf("%s\n",k1);
+}
+
+
+
+
+using function pointer:
+
+#include <stdio.h>
+void fun(char k[],char k1[])
+{
+    int i=0;
+    for( i=0;k1[i]!='\0';i++)
+    {
+    k[i]=k1[i];
+    }
+    k[i]='\0';
+    printf("%s\n",k);
+    printf("%s\n",k1);
+}
+int main()
+{
+    char k[]="kiran kumar";
+    char k1[]="yadav";
+    void (*fptr)(char [],char []);
+    fptr=fun;
+    fptr(k,k1);
+    
+}
+    
      printf("%d ",i);
 }
 int main()
