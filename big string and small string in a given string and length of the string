@@ -33,7 +33,7 @@ int main()
         if(strlen(small)>strlen(word[k]))
         {
             strcpy(small,word[k]);
-        }
+            }
     }
     printf("%s\n",large);
     printf("%s\n",small);
@@ -42,5 +42,100 @@ int main()
     printf("%d\n",l);
      printf("%d",l1);
     
+    
+}
+
+
+
+
+
+
+
+using function pointer:
+
+
+
+#include<stdio.h>
+#include<string.h>
+void fun(char str[])
+{
+
+    char word[10][10],large[10],small[10];
+    int i=0,j=0,k=0,length=0;
+    
+    for(k=0;str[k]!='\0';k++)
+    {
+        if(str[k]!=' ' && str[k]!='\0')
+        {
+         word[i][j++]=str[k];   
+        }
+    
+    else 
+    {
+    word[i][j]='\0';
+    i++; 
+    j=0; 
+    }
+    }
+    length=i+1;
+    strcpy(large,word[0]);
+    strcpy(small,word[0]);
+    for(k=0;k<length;k++)
+    {
+        if(strlen(large)<strlen(word[k]))
+        {
+            strcpy(large,word[k]);
+        }
+    
+        if(strlen(small)>strlen(word[k]))
+        {
+            strcpy(small,word[k]);
+        }
+    }
+    printf("%s\n",large);
+    printf("%s\n",small);
+    int l=strlen(large);
+    int l1=strlen(small);
+    printf("%d\n",l);
+     printf("%d",l1);
+}
+    int main()
+    {
+        char str[]={"i work at thunder"};
+        void (*ptr)(char [])=fun;
+        ptr(str);
+    }
+    
+
+
+
+finding the biggest string length using func pointers:
+
+
+#include <stdio.h>
+int fun(char s[])
+{
+   
+   int count=0,temp=0;
+     for(int i=0;s[i]!='\0';i++)
+     {
+       count++;
+   if(s[i]==' ')
+   {
+      if (temp<count)
+      {
+          temp = count-1;
+          count =0;
+      }
+      count =0;
+     }
+     }
+    printf("%d ",temp);
+}
+int main()
+{
+    char s[]="i work atthundersoft ";
+    int (*ptr)(char [])=fun;
+    ptr(s);
     
 }
