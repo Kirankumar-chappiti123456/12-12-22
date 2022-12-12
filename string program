@@ -92,3 +92,26 @@ int main()
     fptr(str);
 }
 
+with string copy function:
+
+#include <stdio.h>
+#include<string.h>
+void fun(char k[],char k1[])
+{
+    int i=0;
+    for(i=0;k[i]!='\0';i++)
+    {
+    strcpy(k1,k);
+    }
+    printf("%s\n",k);
+    printf("%s\n",k1);
+}
+int main()
+{
+    char k[]="yadav";
+    char k1[]="kiran kumar";
+    void (*fptr)(char [],char []);
+    fptr=fun;
+    fptr(k,k1);
+    
+}
