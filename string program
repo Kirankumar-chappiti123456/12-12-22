@@ -1,0 +1,44 @@
+Write a C program to find length of a string with stringlen fun and without fun len:
+
+#include <stdio.h>
+int main()
+{
+    char str[]="i work at thunder";
+    int i=0,C=0;
+    for(i=0;str[i]!='\0';i++)
+    {
+        C++;
+    }
+     printf("%d ",C);
+}
+
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[]="i work at thunder";
+    int l=strlen(str);
+    printf("%d",l);
+}
+
+#include <stdio.h>
+void fun(char str[])
+{
+    
+    int i=0,c=0;
+    for(i=0;str[i]!='\0';i++)
+    {
+        c++;
+    }
+    
+     printf("%d ",i);
+}
+int main()
+{
+    char str[]="i work at thunder";
+    void (*fptr)(char [])=fun;
+    fptr(str);
+}
+
