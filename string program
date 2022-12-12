@@ -115,3 +115,17 @@ int main()
     fptr(k,k1);
     
 }
+another way :
+
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char k[]="kiran";
+    char p[]="kumar";
+    strcpy(k,p);
+    printf("%s",k);
+    printf("%s",p);
+}
