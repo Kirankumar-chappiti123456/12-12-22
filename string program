@@ -36,6 +36,23 @@ void fun(char str[])
     
     
     
+    #include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char k[20]="kiran kumar";
+    char p[20]="yadav";
+    strcat(k,p);
+    printf("%s",k);
+
+    return 0;
+}
+
+    
+    
+    
+    
     
     
     string copy without and with the string copy function:
@@ -115,7 +132,7 @@ int main()
     fptr(k,k1);
     
 }
-another way :
+concatenate:
 
 
 #include <stdio.h>
@@ -123,8 +140,8 @@ another way :
 
 int main()
 {
-    char k[]="kiran";
-    char p[]="kumar";
+    char k[20]="kiran";
+    char p[20]="kumar";
     strcpy(k,p);
     printf("%s",k);
     printf("%s",p);
