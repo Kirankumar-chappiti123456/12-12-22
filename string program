@@ -172,3 +172,52 @@ int main()
 }
 
 
+string comapare function:
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[]="abc";
+    char str1[]="abcd";
+    char str2[]="abc";
+    int val=strcmp(str,str2);
+    printf("%d",val);
+}
+
+
+string compare own function :
+
+
+#include <stdio.h>
+#include <string.h>
+int cmp(char str[],char str1[])
+{
+    int f=0,i=0;
+    while(str[i]!='\0' && str1[i]!='\0')
+    {
+        if(str[i]!=str1[i])
+        {
+            f++;
+            
+        }
+        i++; 
+    }
+    if(f==0)
+    {
+    return 0;
+    }
+    else {
+    return 1;
+    }
+}
+int main()
+{
+   char str[20]="kiran";
+   char str1[20]="kumar";
+    int c=cmp(str,str1);
+    (c==0)?printf("strings are same"):printf("string are not same");
+    
+}
+
+
