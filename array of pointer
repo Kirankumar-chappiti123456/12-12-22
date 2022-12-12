@@ -26,4 +26,45 @@ int main()
    
 }
 
+#include <stdio.h>
+int  fun(char *a[])
+{
+    
+for(int i=0;i<3;i++)
+    {
+    printf("%s ",a[i]);
+    }
+}
 
+
+int main()
+{
+   char *a[3]={"red","blue","yellow"};
+   int (*fptr)(char *[]);
+   fptr=fun;
+   fptr(a);
+    
+}
+
+
+
+using func pointer:
+#include <stdio.h>
+int  fun(char *a[])
+{
+    
+for(int i=0;i<3;i++)
+    {
+    printf("%s ",a[i]);
+    }
+}
+
+
+int main()
+{
+   char *a[3]={"red","blue","yellow"};
+   int (*fptr)(char *[]);
+   fptr=fun;
+   fptr(a);
+    
+}
