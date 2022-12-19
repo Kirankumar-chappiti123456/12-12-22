@@ -139,3 +139,53 @@ int main()
     ptr(s);
     
 }
+
+
+
+using pointer and func pointer:
+
+
+#include<stdio.h>
+#include<string.h>
+char fun(char *p)
+{
+    char words[10][10],i=0,j=0,large[30],small[30];
+    int len=0,k=0;
+    for(k=0;p[k]!='\0';k++)
+    {
+        if(p[k]!=' ' && p[k]!='\0')
+        {
+            words[i][j++]=p[k];
+        }
+        else
+        {
+            words[i][j]='\0';
+            i++;
+            j=0;
+        }
+    }
+    len=i;
+    strcpy(large,words[0]);
+    strcpy(small,words[0]);
+    for(k=0;k<len+1;k++)
+    {
+        if(strlen(large)<strlen(words[k]))
+        {
+            strcpy(large,words[k]);
+        }
+        if(strlen(small)>strlen(words[k]))
+        {
+            strcpy(small,words[k]);
+        }
+    }
+
+    printf("%s\n",small);
+    printf("%s\n",large);
+}
+int main()
+{
+    char a[]="i work at thundersoft";
+    char *p=a;
+    char (*fptr)(char *)=fun;
+    fptr(p);
+}
